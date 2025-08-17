@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Selection</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for subtle gradient animation and font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #87a7b0, #23a3b1, #2a9393);
+            background-size: 300% 300%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .frosted-glass {
+            background: hsla(198, 87%, 42%, 0.982);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <!-- Lucide icons for a clean look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 text-white">
+
+    <!-- Main Title and Heading -->
+    <div class="text-center w-full max-w-4xl mb-8">
+        <h1 class="text-6xl font-extrabold tracking-tight text-red drop-shadow-md mb-2">Category Selection</h1>
+        <p class="text-lg text-gray-300">Choose a category to begin your journey.</p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
+        
+        <!-- Category 1: Coding -->
+        <a href="#" class="frosted-glass flex flex-col items-center justify-center p-8 rounded-xl text-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <i data-lucide="code" class="w-16 h-16 text-fuchsia-400 mb-4 drop-shadow-lg"></i>
+            <h2 class="text-2xl font-bold">Coding</h2>
+        </a>
+
+        <!-- Category 2: Science -->
+        <a href="#" class="frosted-glass flex flex-col items-center justify-center p-8 rounded-xl text-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <i data-lucide="atom" class="w-16 h-16 text-fuchsia-400 mb-4 drop-shadow-lg"></i>
+            <h2 class="text-2xl font-bold">Science</h2>
+        </a>
+
+        <!-- Category 3: Social -->
+        <a href="#" class="frosted-glass flex flex-col items-center justify-center p-8 rounded-xl text-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <i data-lucide="users" class="w-16 h-16 text-fuchsia-400 mb-4 drop-shadow-lg"></i>
+            <h2 class="text-2xl font-bold">Social</h2>
+        </a>
+
+        <!-- Category 4: General Knowledge -->
+        <a href="#" class="frosted-glass flex flex-col items-center justify-center p-8 rounded-xl text-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <i data-lucide="book" class="w-16 h-16 text-fuchsia-400 mb-4 drop-shadow-lg"></i>
+            <h2 class="text-2xl font-bold">General Knowledge</h2>
+        </a>
+        
+        <!-- Category 5: Maths -->
+        <a href="#" class="frosted-glass flex flex-col items-center justify-center p-8 rounded-xl text-center cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <i data-lucide="calculator" class="w-16 h-16 text-fuchsia-400 mb-4 drop-shadow-lg"></i>
+            <h2 class="text-2xl font-bold">Maths</h2>
+        </a>
+    </div>
+
+    <!-- JavaScript to render Lucide icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
+              
